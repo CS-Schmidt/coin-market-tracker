@@ -1,0 +1,20 @@
+{
+  "name": "coin-market-tracker",
+  "version": "0.1.0",
+  "description": "Codebase for Coin Market Tracker: a cryptocurrency web platform.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CS-Schmidt/coin-market-tracker.git"
+  },
+  "license": "MIT",
+  "author": "Ethan Schmidt <es.schmidt.cs@gmail.com> (https://www.linkedin.com/in/cs-schmidt)",
+  "homepage": "https://github.com/CS-Schmidt/coin-market-tracker#readme",
+  "bugs": {
+    "url": "https://github.com/CS-Schmidt/coin-market-tracker/issues"
+  }
+}

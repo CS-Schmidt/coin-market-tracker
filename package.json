@@ -5,6 +5,10 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint --config ./config/.eslintrc.yaml --ignore-path .gitignore --fix --ext .cjs,.js,.jsx,.mjs,.ts ./",
+    "lint:css": "stylelint --config ./config/.stylelintrc.yaml --ignore-path .gitignore --fix \"**/*.css\"",
+    "format": "prettier --config ./config/.prettierrc.yaml --ignore-path .gitignore --ignore-unknown --write **/*",
     "prepare": "husky install"
   },
   "repository": {
@@ -20,6 +24,16 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
-    "husky": "^8.0.1"
+    "eslint": "^8.17.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.30.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.0",
+    "prettier": "^2.6.2",
+    "stylelint": "^14.8.5",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^25.0.0"
   }
 }

@@ -1,0 +1,49 @@
+# These are the environments where we expect JavaScript files to be executed.
+# Eslint uses this informaton to understand what global variables should be
+# available (e.g. `window` in a browser or `global` in NodeJS)
+env:
+  node: true
+  browser: true
+  es2022: true
+  worker: true
+  serviceworker: true
+
+# This configuration will inherit the traits of the other configurations we
+# specify below.
+extends:
+  - 'eslint:recommended'
+  - 'plugin:react/recommended'
+  - 'google'
+  - 'prettier'
+
+# Configuration options for the parser eslint uses to build an in-memory
+# Options for the parser eslint uses to build an in-memory representation of
+# each JavaScript file we want to lint.
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 'latest'
+  sourceType: 'module'
+
+# Specifies the list of third-party plugins we want to incorporate into eslint.
+# Plugins allow us to further extend eslint's capabilities.
+plugins:
+  - 'react'
+
+# Plugins refer to the settings object which specifies information that should
+# be shared by all of their rules.
+settings:
+  react:
+    version: 'detect'
+
+# Sets the patterns that eslint will ignore. Each glob pattern you specify is
+# relative to the directory that the config file is placed in. With the
+# `--config` cli option, globs are relative to the current working directory.
+ignorePatterns:
+  - '!**/.*' # "unignores" hidden files & folders
+  - '**/node_modules/*' # "re-ignores" all non-hidden files in node_modules
+  - '**/node_modules/.*' # "re-ignores" all hidden files in node_modules
+
+rules:
+  no-var: 'off'
+  require-jsdoc: 'off'

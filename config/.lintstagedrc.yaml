@@ -1,0 +1,10 @@
+# This config tells lint-staged to preform the following operations on all
+# files in the git staging area:
+#
+# 1. Lint all js-type files.
+# 2. Lint all css files.
+# 3. And finally, format everything.
+
+'*.([cm]js|js?x)': 'eslint --config ./config/.eslintrc.yaml --ignore-path .gitignore --fix --ext .cjs,.js,.jsx,.mjs,.ts'
+'*.css': 'stylelint --config ./config/.stylelintrc.yaml --ignore-path .gitignore --fix'
+'*': 'prettier --config ./config/.prettierrc.yaml --ignore-path .gitignore --ignore-unknown --write'

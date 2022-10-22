@@ -1,0 +1,21 @@
+# General Options
+printWidth: 80
+proseWrap: 'preserve'
+useTabs: false
+tabWidth: 2
+endOfLine: lf
+embeddedLanguageFormatting: 'auto'
+
+# JS Options
+semi: true
+singleQuote: true
+bracketSpacing: true
+trailingComma: 'es5'
+arrowParens: 'always'
+
+# HTML & JSX Options
+quoteProps: 'as-needed'
+jsxSingleQuote: false
+bracketSameLine: false
+singleAttributePerLine: false
+htmlWhitespaceSensitivity: 'css'
